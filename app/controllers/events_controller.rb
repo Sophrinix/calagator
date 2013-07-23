@@ -66,7 +66,7 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     @event.associate_with_venue(venue_ref(params))
     has_new_venue = @event.venue && @event.venue.new_record?
-
+    
     @event.start_time = [ params[:start_date], params[:start_time] ]
     @event.end_time   = [ params[:end_date], params[:end_time] ]
 

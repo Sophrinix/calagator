@@ -17,6 +17,8 @@
 # A model that represents a source of events data, such as feeds for hCal, iCal, etc.
 class Source < ActiveRecord::Base
   include SearchEngine
+  include Rakismet::Model
+  
 
   validate :assert_url
 

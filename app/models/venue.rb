@@ -31,6 +31,8 @@
 class Venue < ActiveRecord::Base
   include SearchEngine
   include StripWhitespace
+  include Rakismet::Model
+  
 
   has_paper_trail
   acts_as_taggable

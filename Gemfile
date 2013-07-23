@@ -87,6 +87,8 @@ gem 'jquery-rails', '1.0.19'
 gem 'progress_bar', '0.4.0'
 gem 'exception_notification', '2.6.1'
 
+# spam solution
+gem 'rakismet'
 # gem 'paper_trail_manager', :git => 'https://github.com/igal/paper_trail_manager.git'
 # gem 'paper_trail_manager', :path => '../paper_trail_manager'
 gem 'paper_trail_manager', '>= 0.2.0'

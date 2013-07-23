@@ -24,6 +24,8 @@
 # A model representing a calendar event.
 class Event < ActiveRecord::Base
   include SearchEngine
+  include Rakismet::Model
+  
 
   # Treat any event with a duration of at least this many hours as a multiday
   # event. This constant is used by the #multiday? method and is primarily
@@ -54,7 +56,7 @@ class Event < ActiveRecord::Base
 
   include ValidatesBlacklistOnMixin
   validates_blacklist_on :title, :description, :url
-
+  
   include UpdateUpdatedAtMixin
 
   include VersionDiff
